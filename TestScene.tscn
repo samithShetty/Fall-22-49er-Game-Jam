@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Snowman.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
@@ -117,6 +117,8 @@ tracks/3/keys = {
 "values": [ 124.343, 61.5796, -1.18421, 10.3702, 82.5008, 124.343 ]
 }
 
+[sub_resource type="LineShape2D" id=6]
+
 [sub_resource type="CircleShape2D" id=3]
 radius = 22.0227
 
@@ -174,6 +176,12 @@ anims/RESET = SubResource( 4 )
 anims/swing = SubResource( 5 )
 
 [node name="Line2D" parent="Snowman" instance=ExtResource( 8 )]
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Snowman/Line2D"]
+shape = SubResource( 6 )
 
 [node name="Elf" type="RigidBody2D" parent="."]
 position = Vector2( -211, -179 )
