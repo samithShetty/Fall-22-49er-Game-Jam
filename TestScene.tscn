@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Snowman.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Elf (1).svg" type="Texture" id=5]
 [ext_resource path="res://sword.png" type="Texture" id=6]
 [ext_resource path="res://Snowman_Arm.svg" type="Texture" id=7]
+[ext_resource path="res://WaterTrail.tscn" type="PackedScene" id=8]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 31.0644
@@ -171,6 +172,8 @@ texture = ExtResource( 6 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Snowman"]
 anims/RESET = SubResource( 4 )
 anims/swing = SubResource( 5 )
+
+[node name="Line2D" parent="Snowman" instance=ExtResource( 8 )]
 
 [node name="Elf" type="RigidBody2D" parent="."]
 position = Vector2( -211, -179 )
