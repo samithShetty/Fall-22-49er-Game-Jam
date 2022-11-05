@@ -15,11 +15,21 @@ func _physics_process(delta):
 	linear_velocity = Vector2(clamp(linear_velocity.x,-speed,speed),clamp(linear_velocity.y,-speed,speed))
 	var x = Input.get_action_strength("right") - Input.get_action_strength("left")
 	var y = Input.get_action_strength("up") - Input.get_action_strength("down")
-	apply_impulse(Vector2(0,0),Vector2(acceleration*x,acceleration*-y))
+	apply_impulse(Vector2(0,0), Vector2(acceleration*x,acceleration*-y))
 	
 	lookDir = lerp(lookDir, Vector2(x,-y), .07)
 	look_at(lookDir + position)
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	var space_state = get_world_2d().direct_space_state
+	# use global coordinates, not local to node
+	var isInWater = space_state.intersect_ray(Vector2(0,0), get_linear_velocity().rotated(-get_global_rotation()).normalized()*35, [], 7, true, true)
+	if isInWater:
+		print("You fell in water!")
+	update()
+
+func _draw():
+	draw_line(get_linear_velocity().rotated(-get_global_rotation()).normalized()*30, get_linear_velocity().rotated(-get_global_rotation()).normalized()*35,Color(0,0,0),3,false)
+	
+func _process(delta):
+	if Input.is_key_pressed(KEY_SPACE):
+		print()
