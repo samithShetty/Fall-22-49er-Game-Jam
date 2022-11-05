@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg11142"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="Snowman Arm.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview11144"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.72515432"
+     inkscape:cx="397.15684"
+     inkscape:cy="561.94935"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs11139" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g4043"
+       transform="translate(73.139409,59.696594)"
+       style="stroke:#803300">
+      <path
+         style="fill:#a05a2c;stroke:#803300;stroke-width:3.41255;stroke-dasharray:none"
+         d="M 51.165384,125.39555 C 22.507412,93.930321 20.958334,91.832641 20.958334,91.832641 l 6.970857,-5.873512 31.368859,35.241051"
+         id="path1282-5" />
+      <path
+         style="fill:#a05a2c;stroke:#803300;stroke-width:3.41255;stroke-dasharray:none"
+         d="m 29.789742,91.491604 c 8.55068,-41.692036 8.81003,-44.28677 8.81003,-44.28677 l -8.99353,-1.485694 -8.95098,46.322969"
+         id="path1282-5-6-9-6" />
+    </g>
+  </g>
+</svg>
