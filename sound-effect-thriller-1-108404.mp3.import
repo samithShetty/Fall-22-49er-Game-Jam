@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sound-effect-thriller-1-108404.mp3-4b6feaa16ccb51059b2c26d7469026de.mp3str"
+
+[deps]
+
+source_file="res://sound-effect-thriller-1-108404.mp3"
+dest_files=[ "res://.import/sound-effect-thriller-1-108404.mp3-4b6feaa16ccb51059b2c26d7469026de.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

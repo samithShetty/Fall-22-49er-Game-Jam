@@ -14,10 +14,9 @@ config/name="SnowDrift"
 run/main_scene="res://title.tscn"
 config/icon="res://icon.png"
 
-[debug]
+[autoload]
 
-shapes/collision/shape_color=Color( 0.870588, 0.0901961, 0.254902, 0.67451 )
-shapes/collision/contact_color=Color( 1, 0.2, 0.101961, 1 )
+Score="*res://score.gd"
 
 [input]
 
@@ -60,5 +59,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-environment/default_clear_color=Color( 0.698039, 0.894118, 0.890196, 1 )
+environment/default_clear_color=Color( 0.4, 0.501961, 1, 1 )
 environment/default_environment="res://default_env.tres"

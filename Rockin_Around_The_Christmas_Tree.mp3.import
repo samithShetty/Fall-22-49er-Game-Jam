@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Rockin_Around_The_Christmas_Tree.mp3-05872e3eb5e77bdacb607f6f84103827.mp3str"
+
+[deps]
+
+source_file="res://Rockin_Around_The_Christmas_Tree.mp3"
+dest_files=[ "res://.import/Rockin_Around_The_Christmas_Tree.mp3-05872e3eb5e77bdacb607f6f84103827.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

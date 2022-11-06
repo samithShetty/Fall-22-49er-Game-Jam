@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Polozhenie-Remix_192(PaglaSongs).mp3-37f9a222f0a43ee8c3619fb47f85994f.mp3str"
+
+[deps]
+
+source_file="res://Polozhenie-Remix_192(PaglaSongs).mp3"
+dest_files=[ "res://.import/Polozhenie-Remix_192(PaglaSongs).mp3-37f9a222f0a43ee8c3619fb47f85994f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Taco Bell Bong - Sound Effect.mp3-d00ba7ca8c12870182c8afc097173a15.mp3str"
+
+[deps]
+
+source_file="res://Taco Bell Bong - Sound Effect.mp3"
+dest_files=[ "res://.import/Taco Bell Bong - Sound Effect.mp3-d00ba7ca8c12870182c8afc097173a15.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

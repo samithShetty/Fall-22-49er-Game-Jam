@@ -11,6 +11,9 @@ var swingTime = 0
 onready var waterTrail = preload("res://WaterTrail.tscn")
 
 
+func _ready():
+	($taco.stream as AudioStreamMP3).loop = false
+	
 func _physics_process(delta):
 
 	if swingTime > 0:
@@ -44,11 +47,17 @@ func _physics_process(delta):
 	# use global coordinates, not local to node
 	var waterCollision = space_state.intersect_ray(position, position + get_linear_velocity().rotated(-get_global_rotation()).normalized()*30, [self], 7, true, true)
 
+	if position.length() > 2500:
+		die()
+
 func _input(event):
 	if event.is_action_pressed("swing") and !$AnimationPlayer.is_playing():
 		$AnimationPlayer.play("swing")
 		$SwordArea/CollisionShape2D.disabled = false
 		swingTime = .4
+		
+func die():
+	get_tree().change_scene("res://deathScreen.tscn")
 
 	if event.is_action_pressed("jump") and !isJumping:
 		isJumping = true
