@@ -14,6 +14,10 @@ config/name="SnowDrift"
 run/main_scene="res://title.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Score="*res://score.gd"
+
 [input]
 
 up={

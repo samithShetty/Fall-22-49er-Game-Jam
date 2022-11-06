@@ -9,7 +9,7 @@ radius = 22.0227
 [sub_resource type="CircleShape2D" id=8]
 radius = 20.0
 
-[node name="Elf" type="RigidBody2D" groups=["elf"]]
+[node name="Elf" type="RigidBody2D"]
 position = Vector2( 450, -71 )
 collision_layer = 5
 collision_mask = 5
