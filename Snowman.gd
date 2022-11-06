@@ -31,7 +31,8 @@ func _physics_process(delta):
 	var space_state = get_world_2d().direct_space_state
 	# use global coordinates, not local to node
 	var waterCollision = space_state.intersect_ray(position, position + get_linear_velocity().rotated(-get_global_rotation()).normalized()*30, [self], 7, true, true)
-
+	if position.length() > 2500:
+		die()
 
 func _input(event):
 	if event.is_action_pressed("swing") and !$AnimationPlayer.is_playing():
@@ -39,9 +40,12 @@ func _input(event):
 		$SwordArea/CollisionShape2D.disabled = false
 		swingTime = .4
 		
+func die():
+	get_tree().change_scene("res://deathScreen.tscn")
 
 func _on_WaterArea_area_entered(area):
-	print("DEATH")
+	die()
+
 
 
 func _on_SwordArea_body_entered(body):

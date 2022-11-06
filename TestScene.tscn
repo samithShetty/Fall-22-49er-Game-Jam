@@ -1,6 +1,8 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Snowman.gd" type="Script" id=1]
+[ext_resource path="res://circle.svg" type="Texture" id=2]
+[ext_resource path="res://Spawner.gd" type="Script" id=3]
 [ext_resource path="res://Snowman.svg" type="Texture" id=4]
 [ext_resource path="res://sword.png" type="Texture" id=6]
 [ext_resource path="res://Snowman_Arm.svg" type="Texture" id=7]
@@ -168,10 +170,15 @@ tracks/5/keys = {
 [sub_resource type="CircleShape2D" id=7]
 radius = 30.1496
 
+[sub_resource type="CircleShape2D" id=8]
+radius = 2500.0
+
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="WaterTrail" parent="." instance=ExtResource( 8 )]
 width_curve = SubResource( 6 )
+default_color = Color( 0.4, 0.501961, 1, 1 )
 
 [node name="WaterArea" parent="WaterTrail" index="0"]
 collision_mask = 8
@@ -237,7 +244,22 @@ anims/swing = SubResource( 5 )
 [node name="SnowmanCollider" type="CollisionShape2D" parent="Snowman"]
 shape = SubResource( 7 )
 
+[node name="island" type="Area2D" parent="."]
+modulate = Color( 0.615686, 0.878431, 0.886275, 1 )
+z_index = -1000
+collision_layer = 17
+collision_mask = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="island"]
+shape = SubResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="island"]
+scale = Vector2( 4.4, 4.4 )
+texture = ExtResource( 2 )
+
 [connection signal="area_entered" from="WaterTrail/WaterArea" to="Snowman" method="_on_WaterArea_area_entered"]
 [connection signal="body_entered" from="Snowman/SwordArea" to="Snowman" method="_on_SwordArea_body_entered"]
+[connection signal="body_exited" from="island" to="." method="_on_island_body_exited"]
+[connection signal="body_exited" from="island" to="Snowman" method="_on_island_body_exited"]
 
 [editable path="WaterTrail"]

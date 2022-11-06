@@ -16,8 +16,7 @@ func _physics_process(delta):
 	
 	var direction = (get_parent().get_node("Snowman").position - position)
 	
-	if direction.length() > 1000:
-		queue_free()
+	
 	
 	direction = direction.normalized()
 	
@@ -27,7 +26,8 @@ func _physics_process(delta):
 	apply_impulse(Vector2(0,0),Vector2(acceleration*x,acceleration*y))
 	
 	look_at(direction + position)
-
+	if position.length() > 2500:
+		queue_free()
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
