@@ -28,6 +28,7 @@ func _physics_process(delta):
 	look_at(direction + position)
 	if position.length() > 2500:
 		Score.call("addToScore", 10)
+		get_parent().get_node("Snowman/taco").play()
 		queue_free()
 	
 

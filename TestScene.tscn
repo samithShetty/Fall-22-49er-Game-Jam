@@ -1,12 +1,14 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Snowman.gd" type="Script" id=1]
 [ext_resource path="res://circle.svg" type="Texture" id=2]
 [ext_resource path="res://Spawner.gd" type="Script" id=3]
 [ext_resource path="res://Snowman.svg" type="Texture" id=4]
+[ext_resource path="res://Rockin_Around_The_Christmas_Tree.mp3" type="AudioStream" id=5]
 [ext_resource path="res://sword.png" type="Texture" id=6]
 [ext_resource path="res://Snowman_Arm.svg" type="Texture" id=7]
 [ext_resource path="res://WaterTrail.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Taco Bell Bong - Sound Effect.mp3" type="AudioStream" id=9]
 
 [sub_resource type="Curve" id=6]
 _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.677108, 0.445455 ), 0.0, 0.0, 0, 0, Vector2( 0.884337, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
@@ -244,6 +246,14 @@ anims/swing = SubResource( 5 )
 
 [node name="SnowmanCollider" type="CollisionShape2D" parent="Snowman"]
 shape = SubResource( 7 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Snowman"]
+stream = ExtResource( 5 )
+volume_db = -13.109
+autoplay = true
+
+[node name="taco" type="AudioStreamPlayer2D" parent="Snowman"]
+stream = ExtResource( 9 )
 
 [node name="island" type="Area2D" parent="."]
 modulate = Color( 0.615686, 0.878431, 0.886275, 1 )

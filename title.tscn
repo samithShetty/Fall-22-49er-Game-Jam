@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://MerryChristmasFlake-mJY9.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Button.gd" type="Script" id=2]
 [ext_resource path="res://snowflake.png" type="Texture" id=3]
 [ext_resource path="res://Title_Snowman.svg" type="Texture" id=4]
+[ext_resource path="res://jingle-bells-violin-main-8644.mp3" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -105,5 +106,10 @@ lifetime = 10.0
 visibility_rect = Rect2( -1000, -1000, 2000, 2000 )
 process_material = SubResource( 5 )
 texture = ExtResource( 3 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+volume_db = -13.109
+autoplay = true
 
 [connection signal="pressed" from="Camera2D/CanvasLayer/Control/Button" to="Camera2D/CanvasLayer/Control/Button" method="_on_Button_pressed"]

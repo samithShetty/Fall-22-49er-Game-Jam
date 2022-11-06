@@ -4,7 +4,7 @@ extends RigidBody2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
+var hasEnteredScreen = false
 export var speed = 200
 export var acceleration = 3.0
 var maxSpd = 0
@@ -14,6 +14,7 @@ var rng = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	($AudioStreamPlayer2D.stream as AudioStreamMP3).loop = false
 	rng.randomize()
 	if rng.randi_range(1,10) == 10:
 		speed = 500
@@ -60,3 +61,10 @@ func _physics_process(delta):
 
 func _on_MeleeArea_body_entered(body):
 	body.moveAngle = (body.position-position).normalized().angle()
+	
+
+
+func _on_VisibilityNotifier2D_screen_entered():
+	if !hasEnteredScreen:
+		hasEnteredScreen = true
+		$AudioStreamPlayer2D.play()

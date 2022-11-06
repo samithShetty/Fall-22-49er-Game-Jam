@@ -8,7 +8,9 @@ var swingTime = 0
 
 var lookDir = Vector2(1,0)
 var moveAngle = 0
-
+func _ready():
+	($taco.stream as AudioStreamMP3).loop = false
+	
 func _physics_process(delta):
 
 	if swingTime > 0:

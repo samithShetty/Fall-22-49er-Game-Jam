@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/jingle-bells-violin-main-8644.mp3-f6859fffdd1f4378a58846d080994b20.mp3str"
+
+[deps]
+
+source_file="res://jingle-bells-violin-main-8644.mp3"
+dest_files=[ "res://.import/jingle-bells-violin-main-8644.mp3-f6859fffdd1f4378a58846d080994b20.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
