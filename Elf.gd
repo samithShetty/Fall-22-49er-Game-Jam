@@ -12,9 +12,14 @@ func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta):
-	linear_velocity = Vector2(clamp(linear_velocity.x,-speed,speed),clamp(linear_velocity.y,-speed,speed))
+	#linear_velocity = Vector2(clamp(linear_velocity.x,-speed,speed),clamp(linear_velocity.y,-speed,speed))
 	
-	var direction = (get_parent().get_node("Snowman").position - position).normalized()
+	var direction = (get_parent().get_node("Snowman").position - position)
+	
+	if direction.length() > 1000:
+		queue_free()
+	
+	direction = direction.normalized()
 	
 	var x = direction.x
 	var y = direction.y
@@ -23,7 +28,13 @@ func _physics_process(delta):
 	
 	look_at(direction + position)
 
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Area2D_body_entered(body):
+	print("man")
+	body.apply_impulse(Vector2(0,0),(body.position - $MeleeArea.global_position).normalized() * 200)
