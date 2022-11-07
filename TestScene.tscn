@@ -22,7 +22,7 @@ radius = 30.0
 [sub_resource type="Animation" id=4]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("rightArm:position")
+tracks/0/path = NodePath("Sprites/rightArm:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -34,7 +34,7 @@ tracks/0/keys = {
 "values": [ Vector2( 23, 27 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("rightArm:rotation_degrees")
+tracks/1/path = NodePath("Sprites/rightArm:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -46,7 +46,7 @@ tracks/1/keys = {
 "values": [ 83.9243 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Sword:position")
+tracks/2/path = NodePath("Sprites/Sword:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -58,7 +58,7 @@ tracks/2/keys = {
 "values": [ Vector2( 58, 12 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Sword:rotation_degrees")
+tracks/3/path = NodePath("Sprites/Sword:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -70,7 +70,7 @@ tracks/3/keys = {
 "values": [ 51.5626 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("leftArm:position")
+tracks/4/path = NodePath("Sprites/leftArm:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -82,7 +82,7 @@ tracks/4/keys = {
 "values": [ Vector2( 19, -30 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("leftArm:rotation_degrees")
+tracks/5/path = NodePath("Sprites/leftArm:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -97,7 +97,7 @@ tracks/5/keys = {
 [sub_resource type="Animation" id=5]
 resource_name = "swing"
 tracks/0/type = "value"
-tracks/0/path = NodePath("rightArm:position")
+tracks/0/path = NodePath("Sprites/rightArm:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -109,7 +109,7 @@ tracks/0/keys = {
 "values": [ Vector2( 25, 14 ), Vector2( 24, 27 ), Vector2( 16, 33 ), Vector2( 22, 29 ), Vector2( 25, 23 ), Vector2( 25, 14 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("rightArm:rotation_degrees")
+tracks/1/path = NodePath("Sprites/rightArm:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -121,7 +121,7 @@ tracks/1/keys = {
 "values": [ 36.1042, 81.3309, 126.558, 96.4064, 66.2553, 36.1042 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Sword:position")
+tracks/2/path = NodePath("Sprites/Sword:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -133,7 +133,7 @@ tracks/2/keys = {
 "values": [ Vector2( 26, -20 ), Vector2( 60, 12 ), Vector2( 47, 61 ), Vector2( 62, 28 ), Vector2( 52, -3 ), Vector2( 26, -20 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Sword:rotation_degrees")
+tracks/3/path = NodePath("Sprites/Sword:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -145,7 +145,7 @@ tracks/3/keys = {
 "values": [ -20.3704, 56.5208, 133.412, 82.1512, 30.8904, -20.3704 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("leftArm:position")
+tracks/4/path = NodePath("Sprites/leftArm:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -157,7 +157,7 @@ tracks/4/keys = {
 "values": [ Vector2( 19, -30 ), Vector2( 11, -35 ), Vector2( 19, -30 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("leftArm:rotation_degrees")
+tracks/5/path = NodePath("Sprites/leftArm:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -180,7 +180,6 @@ script = ExtResource( 3 )
 
 [node name="WaterTrail" parent="." instance=ExtResource( 8 )]
 width_curve = SubResource( 6 )
-default_color = Color( 0.4, 0.501961, 1, 1 )
 
 [node name="WaterArea" parent="WaterTrail" index="0"]
 collision_mask = 8
@@ -212,34 +211,6 @@ collision_mask = 4
 shape = SubResource( 2 )
 disabled = true
 
-[node name="Snowman" type="Sprite" parent="Snowman"]
-position = Vector2( -1, -1 )
-rotation = 1.5708
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 4 )
-
-[node name="rightArm" type="Sprite" parent="Snowman"]
-position = Vector2( 23, 27 )
-rotation = 1.46476
-scale = Vector2( 0.1, 0.1 )
-z_index = 1
-texture = ExtResource( 7 )
-flip_h = true
-
-[node name="leftArm" type="Sprite" parent="Snowman"]
-position = Vector2( 19, -30 )
-rotation = 1.45196
-scale = Vector2( 0.1, 0.1 )
-z_index = 1
-texture = ExtResource( 7 )
-
-[node name="Sword" type="Sprite" parent="Snowman"]
-position = Vector2( 58, 12 )
-rotation = 0.899937
-scale = Vector2( 0.07, 0.07 )
-z_index = -1
-texture = ExtResource( 6 )
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Snowman"]
 anims/RESET = SubResource( 4 )
 anims/swing = SubResource( 5 )
@@ -254,6 +225,36 @@ autoplay = true
 
 [node name="taco" type="AudioStreamPlayer2D" parent="Snowman"]
 stream = ExtResource( 9 )
+
+[node name="Sprites" type="Node2D" parent="Snowman"]
+
+[node name="Snowman" type="Sprite" parent="Snowman/Sprites"]
+position = Vector2( -1, -1 )
+rotation = 1.5708
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 4 )
+
+[node name="rightArm" type="Sprite" parent="Snowman/Sprites"]
+position = Vector2( 23, 27 )
+rotation = 1.46476
+scale = Vector2( 0.1, 0.1 )
+z_index = 1
+texture = ExtResource( 7 )
+flip_h = true
+
+[node name="leftArm" type="Sprite" parent="Snowman/Sprites"]
+position = Vector2( 19, -30 )
+rotation = 1.45196
+scale = Vector2( 0.1, 0.1 )
+z_index = 1
+texture = ExtResource( 7 )
+
+[node name="Sword" type="Sprite" parent="Snowman/Sprites"]
+position = Vector2( 58, 12 )
+rotation = 0.899937
+scale = Vector2( 0.07, 0.07 )
+z_index = -1
+texture = ExtResource( 6 )
 
 [node name="island" type="Area2D" parent="."]
 modulate = Color( 0.615686, 0.878431, 0.886275, 1 )
