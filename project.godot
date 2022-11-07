@@ -18,6 +18,11 @@ config/icon="res://icon.png"
 
 Score="*res://score.gd"
 
+[debug]
+
+shapes/collision/shape_color=Color( 0.870588, 0.0901961, 0.254902, 0.67451 )
+shapes/collision/contact_color=Color( 1, 0.2, 0.101961, 1 )
+
 [input]
 
 up={
@@ -43,6 +48,11 @@ right={
 swing={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":74,"unicode":0,"echo":false,"script":null)
+ ]
+}
+jump={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":32,"unicode":0,"echo":false,"script":null)
  ]
 }
 

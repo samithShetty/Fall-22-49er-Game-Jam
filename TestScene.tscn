@@ -190,6 +190,36 @@ collision_layer = 17
 collision_mask = 3
 script = ExtResource( 1 )
 
+[node name="Sprites" type="Node2D" parent="Snowman"]
+
+[node name="Snowman" type="Sprite" parent="Snowman/Sprites"]
+position = Vector2( -1, -1 )
+rotation = 1.5708
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 4 )
+
+[node name="rightArm" type="Sprite" parent="Snowman/Sprites"]
+position = Vector2( 23, 27 )
+rotation = 1.46476
+scale = Vector2( 0.1, 0.1 )
+z_index = 1
+texture = ExtResource( 7 )
+flip_h = true
+
+[node name="leftArm" type="Sprite" parent="Snowman/Sprites"]
+position = Vector2( 19, -30 )
+rotation = 1.45196
+scale = Vector2( 0.1, 0.1 )
+z_index = 1
+texture = ExtResource( 7 )
+
+[node name="Sword" type="Sprite" parent="Snowman/Sprites"]
+position = Vector2( 58, 12 )
+rotation = 0.899937
+scale = Vector2( 0.07, 0.07 )
+z_index = -1
+texture = ExtResource( 6 )
+
 [node name="WaterCollider" type="Area2D" parent="Snowman"]
 collision_layer = 10
 collision_mask = 2
@@ -225,36 +255,6 @@ autoplay = true
 
 [node name="taco" type="AudioStreamPlayer2D" parent="Snowman"]
 stream = ExtResource( 9 )
-
-[node name="Sprites" type="Node2D" parent="Snowman"]
-
-[node name="Snowman" type="Sprite" parent="Snowman/Sprites"]
-position = Vector2( -1, -1 )
-rotation = 1.5708
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 4 )
-
-[node name="rightArm" type="Sprite" parent="Snowman/Sprites"]
-position = Vector2( 23, 27 )
-rotation = 1.46476
-scale = Vector2( 0.1, 0.1 )
-z_index = 1
-texture = ExtResource( 7 )
-flip_h = true
-
-[node name="leftArm" type="Sprite" parent="Snowman/Sprites"]
-position = Vector2( 19, -30 )
-rotation = 1.45196
-scale = Vector2( 0.1, 0.1 )
-z_index = 1
-texture = ExtResource( 7 )
-
-[node name="Sword" type="Sprite" parent="Snowman/Sprites"]
-position = Vector2( 58, 12 )
-rotation = 0.899937
-scale = Vector2( 0.07, 0.07 )
-z_index = -1
-texture = ExtResource( 6 )
 
 [node name="island" type="Area2D" parent="."]
 modulate = Color( 0.615686, 0.878431, 0.886275, 1 )
